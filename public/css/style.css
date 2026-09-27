@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  overflow: hidden;
+}
+
+.dashboard {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+}
+
+.sidebar {
+  width: 300px;
+  height: 100vh;
+  background: #111827;
+  color: white;
+  padding: 25px 20px;
+  overflow-y: auto;
+}
+
+.logo h2 {
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+
+.logo p {
+  color: #9ca3af;
+  font-size: 13px;
+}
+
+.online-box {
+  margin-top: 30px;
+  padding: 18px;
+  background: #1f2937;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.online-box span {
+  font-size: 25px;
+}
+
+.online-box h3 {
+  font-size: 24px;
+}
+
+.online-box p {
+  color: #9ca3af;
+  font-size: 13px;
+}
+
+.device-section {
+  margin-top: 30px;
+}
+
+.device-section > h3 {
+  font-size: 15px;
+  margin-bottom: 15px;
+  color: #d1d5db;
+}
+
+#deviceList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.device {
+  padding: 15px;
+  background: #1f2937;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.device:hover {
+  background: #374151;
+}
+
+.device.selected {
+  border: 1px solid #60a5fa;
+  background: #25344a;
+}
+
+.device-name {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.device-status {
+  margin-top: 6px;
+  color: #86efac;
+  font-size: 12px;
+}
+
+.device-coordinates {
+  margin-top: 5px;
+  color: #9ca3af;
+  font-size: 11px;
+}
+
+.device-stat {
+  margin-top: 5px;
+  color: #d1d5db;
+  font-size: 11px;
+}
+
+.no-devices {
+  color: #9ca3af;
+  font-size: 13px;
+}
+
+.details-panel {
+  margin-top: 25px;
+  padding: 15px;
+  background: #1f2937;
+  border-radius: 12px;
+}
+
+.hidden {
+  display: none;
+}
+
+.details-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.details-header h3 {
+  font-size: 15px;
+}
+
+.details-header button {
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.detail-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+.detail-label {
+  color: #9ca3af;
+}
+
+.detail-value {
+  color: white;
+  text-align: right;
+}
+
+.follow-button {
+  width: 100%;
+  margin-top: 18px;
+  padding: 11px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.follow-button:hover {
+  background: #1d4ed8;
+}
+
+.follow-button.active {
+  background: #dc2626;
+}
+
+.map-container {
+  flex: 1;
+  height: 100vh;
+}
+
+#map {
+  height: 100%;
+  width: 100%;
+}
+
+@media (max-width: 700px) {
+
+  .sidebar {
+    width: 230px;
+    padding: 20px 15px;
+  }
+
+  .logo h2 {
+    font-size: 18px;
+  }
+
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Real-Time Tracker</title>
+
+  <link rel="stylesheet" href="/css/style.css">
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"
+  >
+</head>
+
+<body>
+
+  <div class="dashboard">
+
+    <aside class="sidebar">
+
+      <div class="logo">
+        <h2>📍 Live Tracker</h2>
+        <p>Real-Time Device Tracking</p>
+      </div>
+
+      <div class="online-box">
+        <span>🟢</span>
+        <div>
+          <h3 id="onlineCount">0</h3>
+          <p>Devices Online</p>
+        </div>
+      </div>
+
+      <div class="device-section">
+
+        <h3>Connected Devices</h3>
+
+        <div id="deviceList">
+          <p class="no-devices">No devices connected</p>
+        </div>
+
+      </div>
+
+      <div id="detailsPanel" class="details-panel hidden">
+
+        <div class="details-header">
+          <h3>Device Details</h3>
+          <button id="closeDetails">×</button>
+        </div>
+
+        <div id="detailsContent"></div>
+
+        <button id="followButton" class="follow-button">
+          Follow Device
+        </button>
+
+      </div>
+
+    </aside>
+
+    <main class="map-container">
+
+      <div id="map"></div>
+
+    </main>
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.8.4/socket.io.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+
+  <script src="/js/script.js"></script>
+
+</body>
+</html>
