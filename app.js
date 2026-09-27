@@ -28,6 +28,10 @@ io.on("connection", function (socket) {
   });
 });
 
+app.get("/health", function (req, res) {
+  res.send("SERVER IS WORKING");
+});
+
 app.get("/", function (req, res) {
   res.render("index");
 });
